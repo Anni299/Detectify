@@ -16,10 +16,10 @@ all users.
 *Educational Resources: * Dark Pattern Buster provides educational content to help users understand 
 common dark patterns and make informed decisions online.
 <p align="center">
- <img src=""C:\Users\Anni\Desktop\Hachathons\DarkPatternBuster\Img1.jpg"" alt="Detectify Home Page" width="738">
+ <img src="C:\Users\Anni\Desktop\Hachathons\DarkPatternBuster\Img1.png" alt="Detectify Home Page" width="738">
 </p>
 <p align="center">
-<img src=""C:\Users\Anni\Desktop\Hachathons\DarkPatternBuster\Img2.jpg""
+<img src="C:\Users\Anni\Desktop\Hachathons\DarkPatternBuster\Img2.png"
  alt="Try Detectify"
  width="686" height="289">
 </p>
