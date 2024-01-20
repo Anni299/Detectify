@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Detectify</title>
+</head>
+<body>
+
+    <!--HEADER -->
+    <nav>
+    <div class="containerheader teal borderYtoX">
+        <a>Home</a>
+        <a>About Us</a>
+        <a href="#TryUs">Try Us</a>
+        <a>Feedback</a>
+        <a href="FAQIndex.html">FAQs</a>
+    </div> 
+</nav>
+
+    <section class="home" id="home">
+      <div class="description">
+        <h1 class="title">
+          <span class="gradient-text">Detectify </span> Guard Against Dark Patterns
+        </h1>
+        <p class="paragraph">
+          In a digital landscape full of traps, having Dark Pattern Detection can make all the difference. Discover why savvy users turn to this invaluable tool to safeguard their online experience and unlock a secure digital journey.
+        </p>
+        <form id="form" autocomplete="off">
+          <input
+            type="email"
+            id="email-id"
+            name="email_address"
+            aria-label="email adress"
+            placeholder="Email Id"
+            required
+            oninput="checkEmpty()" />
+          <button type="submit" class="btn" aria-label="submit">
+            <span>Sign Up</span>
+            
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <img
+          src="https://i.postimg.cc/1XfC9PJW/ellipse-273-2x.png" alt="" />
+      </div>
+    </section>
+
+    <section class="card-container" id="card-container">
+      
+        <div class="card" data-tilt>
+          <div class="content">
+        <img src = "https://i.postimg.cc/ZqrH08sG/ST.jpg" alt="" />
+            <h1>Subscription Trap</h1>
+            <p>
+             A subscription trap deceives users with the promise of free services, then ensnares them in costly subscriptions. Hidden terms complicate escape, turning what seemed like a good deal into an unwanted financial commitment.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="https://i.postimg.cc/525b3GXj/BS.webp" alt="" />
+            <h1>Bait and Switch</h1>
+            <p>
+             Bait and switch online tricks users by advertising one thing but delivering another. It's a crafty move that capitalizes on initial interest, leaving users with an unexpected and often less appealing outcome.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="https://i.postimg.cc/44jL3xWR/DP.webp" alt="" />
+            <h1>Drip Pricing</h1>
+            <p>
+              Drip pricing slyly reveals hidden fees during your online purchase journey. Starting with a seemingly lower cost, these additional charges 'drip' in, surprising users and undermining the transparency of the transaction.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="https://i.postimg.cc/gJPQrkz0/FU-pic.jpg" alt="" />
+            <h1>False Urgency</h1>
+            <p>
+              False urgency is a sneaky website tactic, using fake time constraints to push users into hurried decisions. It preys on the fear of missing out, leading to impulsive choices that users might regret later.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="https://i.postimg.cc/MGkqbw6C/N.webp" alt="" />
+            <h1>Nagging</h1>
+            <p>
+              Nagging on websites is the persistent, digital equivalent of constant nudges. Through continuous prompts and reminders, it aims to wear down resistance, turning a smooth online experience into an irritating interaction.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="content">
+            <img src="https://i.postimg.cc/mDy9WVpr/CS.jpg" alt="" />
+            <h1>Confirm Shaming</h1>
+            <p>
+              Confirm shaming is a crafty website trick, using guilt-inducing prompts to pressure users into specific actions. It leverages subtle psychological tactics to influence decisions through discomfort.
+            </p>
+            <button class="btn btn-grad">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <section class="predict" id="TryUs">
+    <div class="descriptionpredict">
+    <h1 class="title">
+        Try <span class="gradient-text">Detectify </span>
+      </h1>
+   <form action="/predict" method="post">
+       <label for="paragraph">Enter the statement you want to deceptify:</label>
+       <textarea name="paragraph" id="paragraph" rows="4" required></textarea>
+       <button type="submit">Predict</button>
+   </form>
+
+    {% if predictions %}
+        <label for="paragraph">Illuminating the dark pattern:</label>
+        <p>{{ paragraph | safe }}</p>
+        <!--<p>Predictions:</p>
+        <ul>
+            {% for prediction, sentence in predictions %}
+                <li>{{ sentence }} - {% if prediction == 1 %}<strong>Deceptive</strong>{% else %}Not Deceptive{% endif %}</li>
+            {% endfor %}
+        </ul>-->
+    {% endif %}
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="f-item-con">
+            <div class="app-info">
+                <span class='app-name'>
+                    <span class='app-initial'>O</span>ur<span class='app-initial'>T</span>eam
+                    <span class='team-name'>AvengHERS</span>
+                    <ul style="font-weight: 150; margin-top: 10px;">
+                        Anandita Chaudhary<br>
+                        Bhavya Taneja<br>
+                        Joel Saxena<br>
+                        Rishima Madan<br>
+                        Vaishnavi<br>
+                    </ul>
+                </span>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+            </div>
+            <div class="useful-links">
+                <div class="footer-title">Useful Links</div>
+                <ul>
+                    <li>Home</li>
+                    <li>Sign Up</li>
+                    <li>About Us</li>
+                    <li>Try Us</li>
+                    <li>Feedback</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+            <div class="g-i-t">
+                <div class="footer-title">Get in Touch</div>
+                <form action="/" method="post" class="space-y-2">
+                    <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Name' />
+                    <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
+                    <input type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+                        placeholder='Message...'></input>
+                    <button type="submit" class='f-btn'>Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class='cr-con'>Copyright &copy; 2024 | Made by AvengHERS</div>
+    </footer>
+  </body>
+  </html>
