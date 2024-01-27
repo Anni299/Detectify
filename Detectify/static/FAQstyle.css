@@ -1,41 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+/* Style Comments for CSS File */
 
+/* General Reset Styles */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+/* Global Styles for the Entire Document */
 *{
     padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif; /* Setting the default font family for the entire document */
 }
 
-html, body
-{
+html, body {
     margin: 0px;
     scroll-behavior: smooth;
-
 }
 
-/* HEADER */
-header
-{
-    font-family: Raleway;
+/* Header Section Styles */
+header {
+    font-family: Raleway; /* Setting the font family for the header section */
     margin:  auto;
     padding: 5em 3em;
     text-align: center;
     background: #555;
 }
 
-div.containerheader
-{
-    font-family: Raleway;
+div.containerheader {
+    font-family: Raleway; /* Font family for the header container */
     margin: 0 auto;
     padding: 3em 3em;
     text-align: right;
 }
 
-div.containerheader a
-{
+div.containerheader a {
     color: #FFF;
     text-decoration: none;
     font: 20px Raleway;
@@ -46,22 +44,21 @@ div.containerheader a
     cursor: pointer;
 }
 
-div .logo img{
+div .logo img {
     position: absolute;
     top: 15px;
     left: 15px;
     height: 120px;
     width: 250px;
-  }
+}
 
-.teal
-{
+/* Teal Background Section */
+.teal {
     background: #252b60;
 }
 
-/* Border from Y to X  */
-div.borderYtoX a:before, div.borderYtoX a:after
-{
+/* Border Animation from Y to X */
+div.borderYtoX a:before, div.borderYtoX a:after {
     position: absolute;
     opacity: 0.5;
     height: 100%;
@@ -71,51 +68,59 @@ div.borderYtoX a:before, div.borderYtoX a:after
     transition: all 0.3s;
 }
 
-div.borderYtoX a:before
-{
+div.borderYtoX a:before {
     left: 0px;
     top: 0px;
 }
 
-div.borderYtoX a:after
-{
+div.borderYtoX a:after {
     right: 0px;
     bottom: 0px;
 }
 
-div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
-{
+div.borderYtoX a:hover:before, div.borderYtoX a:hover:after {
     opacity: 1;
     height: 2px;
     width: 100%;
 }
 
-/* FOOTER */
+/* Footer Section Styles */
 footer {
-    margin: 0; padding: 0;
-    border: 0; outline: 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style: none;
     text-decoration: none;
 }
-:root{
+
+:root {
     --theme-col: #798aeb;
 }
+
+/* Styling for the Footer Container */
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
-footer{
+
+/* Styling for the Footer Background Color */
+footer {
     background-color: #252b60;
 }
-.f-item-con{
+
+/* Styling for Footer Item Container */
+.f-item-con {
     padding: 1.5rem 4rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
 }
-footer .app-name{
+
+/* Styling for App Name in Footer */
+footer .app-name {
     color: white;
     border-left: 4px solid var(--theme-col);
     padding-left: 1.5rem;
@@ -123,15 +128,20 @@ footer .app-name{
     line-height: 2.25rem;
     font-weight: 700;
 }
-.app-name .app-initial{
+
+/* Styling for App Initial in Footer Name */
+.app-name .app-initial {
     color: var(--theme-col);
 }
-footer .app-info p{
+
+/* Styling for App Information in Footer */
+footer .app-info p {
     color: white;
     padding-left: 1.65rem;
 }
 
-footer .footer-title{ 
+/* Styling for Footer Title */
+footer .footer-title { 
     font-size: 1.75rem;
     line-height: 1.75rem;
     color: white;
@@ -139,38 +149,52 @@ footer .footer-title{
     padding-left: 1.5rem;
     height: fit-content;
 }
-footer ul{ 
+
+/* Styling for Footer Unordered List */
+footer ul { 
     padding-left: 1.75rem;
     color: white;
-    font-size: 1.1rem/* 14px */;
+    font-size: 1.1rem; /* 14px */
     line-height: 1.25rem;
     margin-top: .5rem;
 }
-footer ul li{ 
+
+/* Styling for Footer List Items */
+footer ul li { 
     margin: .25rem 0;
     cursor: pointer;
     color: #d4d4d4;
     width: fit-content;
 }
-footer ul li:hover{
+
+/* Styling for Hover Effect on Footer List Items */
+footer ul li:hover {
     color: white;
 }
-footer .help-sec{
+
+/* Styling for Help Section in Footer */
+footer .help-sec {
     grid-column-start: 2;
 }
-footer .cr-con{
+
+/* Styling for Footer Container with Copyright Information */
+footer .cr-con {
     background-color: #252b60;
     color: white;
     padding: 1rem 4rem;
     text-align: center;
 }
-.g-i-t{
+
+/* Styling for GitHub Icon Section in Footer */
+.g-i-t {
     display: grid;
     grid-column-start: 3;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.g-i-t form{
+
+/* Styling for GitHub Icon Form */
+.g-i-t form {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -178,14 +202,20 @@ footer .cr-con{
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)); 
 }
-form .g-inp{
+
+/* Styling for GitHub Icon Text Input */
+form .g-inp {
     padding: .25rem .5rem;
     font-size: 1.1rem;
 }
-.g-inp textarea{
+
+/* Styling for GitHub Icon Textarea */
+.g-inp textarea {
     height: 150px;
 }
-.f-btn{
+
+/* Styling for Footer Button */
+.f-btn {
     padding: .25rem 1rem;
     background-color: var(--theme-col);
     border-radius: .25rem;
@@ -193,19 +223,25 @@ form .g-inp{
     color: white;
     font-weight: 500;
 }
-.team-name{
+
+/* Styling for Team Name Section */
+.team-name {
     position: relative;
     margin-top: 25px;
     margin-left: 20px;
     margin-bottom: 30px;
 }
-p{
+
+/* Styling for Paragraph Text */
+p {
     font-size: 0.9rem;
     position: relative;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.social-links a{
+
+/* Styling for Social Links Section */
+.social-links a {
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -219,30 +255,35 @@ p{
     margin-left: 30px;
     margin-top: 20px;
 }
-.social-links a:hover{
+
+/* Styling for Hover Effect on Social Links */
+.social-links a:hover {
     color: #24262b;
     background-color: #ffffff;
 }
 
-
+/* Gradient Angle Property Definition */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
-
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
+/* Image Styles */
 img {
   width: 100%;
 }
 
+/* FAQ Section Styles */
 .faq-section {
     background: #fdfdfd;
     min-height: 100vh;
     padding: 10vh 0 0;
     margin-bottom: 70px;
 }
+
+/* FAQ Title Styles */
 .faq-title h2 {
   position: relative;
   margin-bottom: 45px;
@@ -251,6 +292,8 @@ img {
   line-height: 1;
   margin-left: 200px;
 }
+
+/* FAQ Title Underline Styles */
 .faq-title h2::before {
     content: "";
     position: absolute;
@@ -261,11 +304,14 @@ img {
     bottom: -25px;
     margin-left: -30px;
 }
+
+/* FAQ Title Paragraph Styles */
 .faq-title p {
   padding: 0 190px;
   margin-bottom: 10px;
 }
 
+/* FAQ Container Styles */
 .faq {
   background: #FFFFFF;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
@@ -274,12 +320,14 @@ img {
   margin-left: 200px;
 }
 
+/* FAQ Card Styles */
 .faq .card {
   border: none;
   background: none;
   border-bottom: 1px dashed #CEE1F8;
 }
 
+/* FAQ Card Header Styles */
 .faq .card .card-header {
   padding: 0px;
   border: none;
@@ -290,10 +338,13 @@ img {
   transition: all 0.3s ease 0s;
 }
 
+/* Hover Effect on FAQ Card Header */
 .faq .card .card-header:hover {
     background: rgba(39, 137, 193, 0.1);
     padding-left: 10px;
 }
+
+/* FAQ Card Title Styles */
 .faq .card .card-header .faq-title {
   width: 80%;
   text-align: left;
@@ -314,6 +365,7 @@ img {
   padding-bottom: 20px;
 }
 
+/* FAQ Card Badge Styles */
 .faq .card .card-header .faq-title .badge {
   display: inline-block;
   width: 20px;
@@ -329,6 +381,7 @@ img {
   margin-right: 20px;
 }
 
+/* FAQ Card Body Styles */
 .faq .card .card-body {
   padding: 30px;
   padding-left: 35px;
@@ -341,10 +394,12 @@ img {
   border-top: 1px solid #F3F8FF;
 }
 
+/* FAQ Card Body Paragraph Styles */
 .faq .card .card-body p {
   margin-bottom: 14px;
 }
 
+/* Responsive Styles for FAQ Section on Smaller Screens */
 @media (max-width: 991px) {
   .faq {
     margin-bottom: 30px;
