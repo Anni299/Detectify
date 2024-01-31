@@ -1,4 +1,4 @@
-# naive_bayes_model.py
+# random_forest_model.py
 
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
