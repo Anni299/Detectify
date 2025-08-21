@@ -23,16 +23,17 @@ X_vec = vectorizer.fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X_vec, y, test_size=0.2, random_state=42)
 
 # Train the Naive Bayes model
-naive_bayes_model = RandomForestClassifier(n_estimators=100, random_state=42)
-naive_bayes_model.fit(X_train, y_train)
+random_forest_model = RandomForestClassifier(n_estimators=100, random_state=42)
+random_forest_model.fit(X_train, y_train)
 
 # Make predictions on the test set
-y_pred = naive_bayes_model.predict(X_test)
+y_pred = random_forest_model.predict(X_test)
 
 # Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
 # Save the trained model
-joblib.dump(naive_bayes_model, 'naive_bayes_model.joblib')
+joblib.dump(random_forest_model, 'random_forest_model.joblib')
 joblib.dump(vectorizer, 'vectorizer.joblib')
+
